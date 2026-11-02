@@ -1,154 +1,179 @@
-/* Жалпы баптаулар */
 * {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-    font-family: 'Plus Jakarta Sans', sans-serif;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
 }
-
-.auth-body {
-    background: linear-gradient(135deg, #f5f7fa 0%, #c3cfe2 100%);
-    height: 100vh;
+body {
+    background-color: #f4f7fc;
+    color: #333;
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+}
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #1a237e;
+    color: white;
+    padding: 15px 40px;
+}
+.logo {
+    font-size: 22px;
+    font-weight: bold;
+}
+.navbar nav a {
+    color: white;
+    text-decoration: none;
+    margin-left: 20px;
+    font-size: 16px;
+    transition: 0.3s;
+}
+.navbar nav a.active, .navbar nav a:hover {
+    color: #9fa8da;
+    text-decoration: underline;
+}
+main {
+    flex: 1;
+}
+.hero {
+    text-align: center;
+    padding: 80px 20px;
+    background: linear-gradient(rgba(0,0,0,0.2), rgba(0,0,0,0.2)), #3f51b5;
+    color: white;
+}
+.hero h1 {
+    font-size: 38px;
+    margin-bottom: 15px;
+}
+.hero p {
+    font-size: 18px;
+    margin-bottom: 25px;
+}
+.btn {
+    background-color: #303f9f;
+    color: white;
+    padding: 12px 25px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    text-decoration: none;
+    font-size: 16px;
+    display: inline-block;
+    transition: background 0.3s;
+}
+.btn:hover {
+    background-color: #1a237e;
+}
+.features {
+    display: flex;
+    justify-content: center;
+    gap: 30px;
+    padding: 50px 20px;
+    flex-wrap: wrap;
+}
+.feature-box {
+    background: white;
+    padding: 25px;
+    border-radius: 8px;
+    width: 280px;
+    text-align: center;
+    box-shadow: 0 4px 6px rgba(0,0,0,0.05);
+}
+.container {
+    padding: 40px 20px;
+    max-width: 1000px;
+    margin: 0 auto;
+    text-align: center;
+}
+.product-grid {
+    display: flex;
+    justify-content: center;
+    gap: 25px;
+    flex-wrap: wrap;
+    margin-top: 30px;
+}
+.product-card {
+    background: white;
+    border-radius: 8px;
+    padding: 20px;
+    width: 280px;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.05);
+    text-align: left;
+}
+.product-card h3 {
+    color: #1a237e;
+    margin-bottom: 10px;
+}
+.desc {
+    font-size: 14px;
+    color: #666;
+    margin-bottom: 15px;
+}
+.btn-buy {
+    background-color: #3f51b5;
+    color: white;
+    border: none;
+    padding: 8px 15px;
+    border-radius: 4px;
+    cursor: pointer;
+    width: 100%;
+}
+.btn-buy:hover {
+    background-color: #303f9f;
+}
+.form-container {
     display: flex;
     justify-content: center;
     align-items: center;
+    padding: 60px 20px;
 }
-
-/* Негізгі контейнер (Карточка) */
-.auth-wrapper {
-    display: flex;
-    background: #ffffff;
-    width: 900px;
-    max-width: 95%;
-    border-radius: 20px;
-    box-shadow: 0 15px 35px rgba(0, 0, 0, 0.1);
-    overflow: hidden;
-}
-
-/* Сол жақ декоративті бөлік */
-.auth-left {
-    flex: 1;
-    background: linear-gradient(135deg, #2c3e50 0%, #3498db 100%);
-    color: white;
+.form-box {
+    background: white;
     padding: 40px;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    position: relative;
+    border-radius: 8px;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.08);
+    width: 100%;
+    max-width: 400px;
 }
-
-.brand-content h1 {
-    font-size: 2.2rem;
-    margin-bottom: 15px;
-}
-
-.brand-content p {
-    font-size: 1rem;
-    opacity: 0.85;
-    line-height: 1.5;
-}
-
-/* Оң жақ формалар бөлігі */
-.auth-right {
-    flex: 1;
-    padding: 40px;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-}
-
-/* Таблетка түріндегі ауыстырғыш (Toggle Pill) */
-.form-toggle-pill {
-    display: flex;
-    background: #f1f2f6;
-    border-radius: 30px;
-    padding: 4px;
-    margin-bottom: 25px;
-}
-
-.pill-btn {
-    flex: 1;
-    background: transparent;
-    border: none;
-    padding: 10px;
-    border-radius: 25px;
-    font-weight: 600;
-    cursor: pointer;
-    color: #57606f;
-    transition: all 0.3s ease;
-}
-
-.pill-btn.active {
-    background: #2c3e50;
-    color: white;
-    box-shadow: 0 4px 10px rgba(44, 62, 80, 0.2);
-}
-
-/* Форма іші */
-.auth-form h2 {
-    font-size: 1.6rem;
-    color: #2f3542;
-    margin-bottom: 5px;
-}
-
-.form-subtitle {
-    font-size: 0.9rem;
-    color: #747d8c;
+.form-box h2 {
+    color: #1a237e;
     margin-bottom: 20px;
+    text-align: center;
 }
-
 .input-group {
     margin-bottom: 15px;
+    display: flex;
+    flex-direction: column;
 }
-
 .input-group label {
-    display: block;
-    font-size: 0.85rem;
-    font-weight: 600;
-    color: #2f3542;
-    margin-bottom: 6px;
+    margin-bottom: 5px;
+    font-size: 14px;
+    color: #555;
 }
-
 .input-group input {
-    width: 100%;
-    padding: 12px 15px;
-    border: 1px solid #dfe4ea;
-    border-radius: 10px;
-    outline: none;
-    font-size: 0.95rem;
-    transition: border 0.3s;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    font-size: 14px;
 }
-
-.input-group input:focus {
-    border-color: #3498db;
-    box-shadow: 0 0 0 3px rgba(52, 152, 219, 0.1);
-}
-
-/* Батырма */
-.btn-submit {
-    width: 100%;
-    background: #2c3e50;
+footer {
+    background-color: #1a237e;
     color: white;
-    border: none;
-    padding: 12px;
-    border-radius: 10px;
-    font-size: 1rem;
-    font-weight: 600;
-    cursor: pointer;
-    margin-top: 10px;
-    transition: background 0.3s;
+    text-align: center;
+    padding: 15px;
+    margin-top: auto;
+    font-size: 14px;
 }
 
-.btn-submit:hover {
-    background: #3498db;
-}
-
-/* Мобильді құрылғыларға бейімделу (Responsive) */
 @media (max-width: 768px) {
-    .auth-wrapper {
+    .navbar {
         flex-direction: column;
+        gap: 10px;
     }
-    .auth-left {
-        display: none; /* Кішкентай экрандарда сол жақ градиентті жасыру */
+    .features {
+        flex-direction: column;
+        align-items: center;
     }
 }

@@ -1,22 +1,19 @@
-document.addEventListener('DOMContentLoaded', () => {
-    const loginBtn = document.getElementById('loginBtn');
-    const registerBtn = document.getElementById('registerBtn');
-    const loginForm = document.getElementById('loginForm');
-    const registerForm = document.getElementById('registerForm');
-
-    if (loginBtn && registerBtn) {
-        loginBtn.addEventListener('click', () => {
-            loginForm.style.display = 'block';
-            registerForm.style.display = 'none';
-            loginBtn.classList.add('active');
-            registerBtn.classList.remove('active');
+document.addEventListener("DOMContentLoaded", () => {
+    // Курсқа жазылу түймелері
+    const buyButtons = document.querySelectorAll(".btn-buy");
+    buyButtons.forEach(button => {
+        button.addEventListener("click", () => {
+            alert("Сіз курсқа сәтті жазылдыңыз! 📚");
         });
+    });
 
-        registerBtn.addEventListener('click', () => {
-            loginForm.style.display = 'none';
-            registerForm.style.display = 'block';
-            registerBtn.classList.add('active');
-            loginBtn.classList.remove('active');
+    // Кіру формасының тексерілісі
+    const loginForm = document.getElementById("loginForm");
+    if (loginForm) {
+        loginForm.addEventListener("submit", (e) => {
+            e.preventDefault();
+            const email = document.getElementById("email").value;
+            alert(`Қош келдіңіз, ${email}! Жүйеге сәтті кірдіңіз.`);
         });
     }
 });
