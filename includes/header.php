@@ -9,9 +9,10 @@
 <body>
     <header class="navbar">
         <div class="logo">🚀 UniHelper</div>
-        <nav>
-            <a href="index.php">Басты бет</a>
-            <a href="courses.php">Курстар</a>
-            <a href="login.php" class="active">Кіру</a>
+      <nav>
+    <a href="index.php">Басты бет</a>
+    <a href="courses.php">Курстар</a>
+    <a href="login.php">Кіру</a>
+    <a href="register.php" class="active">Тіркелу</a>
         </nav>
     </header>
