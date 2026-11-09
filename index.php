@@ -13,6 +13,7 @@
             <a href="index.php" class="active">Басты бет</a>
             <a href="courses.php">Курстар</a>
             <a href="login.php">Кіру</a>
+            <a href="register.php" class="active">Тіркелу</a>
         </nav>
     </header>
 
