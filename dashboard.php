@@ -22,6 +22,7 @@ if (!isset($_SESSION['user_id'])) {
         <nav>
             <a href="index.php">Басты бет</a>
             <a href="courses.php">Курстар</a>
+            <a href="tasks.php">Тапсырмалар</a>
             <a href="logout.php" style="color: #ff8a80;">Шығу</a>
         </nav>
     </header>
